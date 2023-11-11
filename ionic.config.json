@@ -1,0 +1,7 @@
+{
+  "name": "Kala Charity Health Care",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

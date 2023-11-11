@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="./assets/logo.jpg"></ion-img>
+    <ion-title class="ion-text-center">Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" >
+    <form >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label>ID:</ion-label>
+                <ion-input #id type="text" id="id" placeholder="Enter ID"></ion-input>
+                <ion-button (click)="getid(id.value)"> Search </ion-button>
+              </ion-item>
+             <h3>Patient Details</h3>
+              <ion-item>
+                <ion-label position="floating">NAME:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{singlePatient.name}}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">AGE:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{singlePatient.age}}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">GENDER:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{singlePatient.gender}}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">CONTACT:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{singlePatient.contact}}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">DEPARTMENT:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{singlePatient.dept}}"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label position="floating">ADDRESS:</ion-label>
+                <ion-input readonly="true" placeholder="Enter Address" value="{{singlePatient.address}}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">DATE OF REGISTRATION</ion-label>
+                <ion-input readonly="true" placeholder="Enter Date" value="{{singlePatient.date}}"></ion-input>
+              </ion-item>
+              <br>
+              <h3>Total Treatments</h3>
+            
+                <ion-grid *ngFor="let a of treatment"> 
+                <ion-row>
+                 
+                  <ion-col size="2" class="cell-class"><ion-item>
+                    
+                    <ion-label><strong> (DD/MM/YYYY)</strong></ion-label></ion-item>
+                 
+                  <ion-item><ion-input placeholder="DD/MM/YYYY" value="{{a.date}}"></ion-input></ion-item> </ion-col>
+                  <ion-col size="5" class="cell-class workdone"><ion-item>
+                    <ion-label><strong> WORKDONE</strong></ion-label>
+                  </ion-item>
+                    <ion-item>
+                      
+                     <ion-input  placeholder="Write Here" value="{{a.workDone}}"></ion-input></ion-item>
+                  </ion-col>
+                  
+                  <ion-col  size="3" class="cell-class"><ion-item>
+                    <ion-label><strong> TOTAL AMOUNT ₹</strong></ion-label></ion-item>
+                   <ion-item> ₹ <ion-input value="{{a.totalAmount}}" ></ion-input></ion-item>
+                  </ion-col>
+                  <ion-col size="2" class="cell-class"><ion-item>
+                    <ion-label><strong> TOTAL PAID ₹ </strong></ion-label></ion-item>
+                   <ion-item>  ₹<ion-input value="{{a.totalPaid}}"></ion-input></ion-item>
+                  </ion-col>
+                  
+                </ion-row>
+              
+  <div>
+    
+  </div>
+  </ion-grid>
+  
+  
+  
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

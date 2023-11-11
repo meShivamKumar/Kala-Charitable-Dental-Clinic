@@ -1,0 +1,82 @@
+<ion-content class="print">
+<ion-header id="component1">
+  <ion-toolbar>
+    <ion-img src="./assets/logo.jpg"></ion-img>
+    <ion-title class="ion-text-center">Billing</ion-title>
+    <ion-button  slot="end" (click)="print()">Print</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="container" >
+  <form >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label>ID:</ion-label>
+              <ion-input #id type="text" id="id" placeholder="Enter ID"></ion-input>
+              <ion-button (click)="getid(id.value)"> Search </ion-button>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">NAME:</ion-label>
+              <ion-input placeholder="Name" readonly="true" value="{{singlePatient.name}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">ADDRESS:</ion-label>
+              <ion-input readonly="true" placeholder="Enter Address" value="{{singlePatient.address}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">DATE OF REGISTRATION</ion-label>
+              <ion-input readonly="true" placeholder="Enter Date" value="{{singlePatient.date}}"></ion-input>
+            </ion-item>
+            <br>
+            <ion-title>Treatments</ion-title>
+          
+              <ion-grid *ngFor="let a of treatment"> 
+              <ion-row>
+               
+                <ion-col size="2" class="cell-class"><ion-item>
+                  
+                  <ion-label><strong> (DD/MM/YYYY)</strong></ion-label></ion-item>
+               
+                <ion-item><ion-input placeholder="DD/MM/YYYY" value="{{a.date}}"></ion-input></ion-item> </ion-col>
+                <ion-col size="5" class="cell-class workdone"><ion-item>
+                  <ion-label><strong> WORKDONE</strong></ion-label>
+                </ion-item>
+                  <ion-item>
+                    
+                   <ion-input  placeholder="Write Here" value="{{a.workDone}}"></ion-input></ion-item>
+                </ion-col>
+                
+                <ion-col  size="3" class="cell-class"><ion-item>
+                  <ion-label><strong> TOTAL AMOUNT ₹</strong></ion-label></ion-item>
+                 <ion-item> ₹ <ion-input value="{{a.totalAmount}}" ></ion-input></ion-item>
+                </ion-col>
+                <ion-col size="2" class="cell-class"><ion-item>
+                  <ion-label><strong> PAID AMOUNT ₹ </strong></ion-label></ion-item>
+                 <ion-item>  ₹<ion-input value="{{a.paidAmount}}"></ion-input></ion-item>
+                 <ion-item *ngFor="let amt of a.visit">  ₹<ion-input value="{{amt}}" ></ion-input></ion-item>
+              
+                 <ion-item> Total ₹<ion-label>{{a.totalPaid}}</ion-label></ion-item>
+                </ion-col>
+                <ion-item> <ion-button color="--ion-color-primary-contrast" id="btn" (click)="add(a)" onclick="this.style.backgroundColor = '#000'; this.style.color = 'red';" ><ion-icon name="print-outline" color="primary" size="large"></ion-icon></ion-button></ion-item>
+              </ion-row>
+            
+<div>
+  
+</div>
+</ion-grid>
+
+
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</div>
+</ion-content>
+</ion-content>

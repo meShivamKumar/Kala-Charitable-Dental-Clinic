@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Print</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>ID:</ion-label>
+    <ion-input #id type="text" id="id" placeholder="Enter ID"></ion-input>
+    <ion-button (click)="getid(id.value)"> Search </ion-button>
+  </ion-item>
+</ion-content>

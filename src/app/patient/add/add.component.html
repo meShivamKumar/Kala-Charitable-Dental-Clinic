@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Add Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+
+
+  <form [formGroup]="form" (ngSubmit)="addPatients()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+<ion-list>
+<ion-item>
+  <ion-label position="floating">ID:</ion-label>
+  <ion-input formControlName="id" placeholder="Enter ID"  value="{{value}}"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">NAME:</ion-label>
+  <ion-input formControlName="name" placeholder="Enter Name"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">ADDRESS:</ion-label>
+  <ion-input formControlName="address" placeholder="Enter Address"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">CONTACT NUMBER:</ion-label>
+  <ion-input formControlName="contact" placeholder="Enter Contact"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">ENTER AGE</ion-label>
+  <ion-input formControlName="age" placeholder="Enter Age"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>GENDER</ion-label>
+  <select formControlName="gender">
+    <option >
+      Male
+    </option>
+    <option >
+     Female
+    </option>
+    <option >
+      Others
+    </option>
+  </select></ion-item>
+  <ion-item>
+    <ion-label position="floating">DATE</ion-label>
+    <ion-input type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" formControlName="date" placeholder="Enter Date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ENTER DEPARTMENT</ion-label>
+    <ion-input formControlName="dept" placeholder="Enter Department"></ion-input>
+  </ion-item>
+
+ 
+<ion-row>
+  <ion-col>
+  <ion-button type="submit" expand="full"  (click)="addPatients()"  [disabled]="!form.valid">Submit</ion-button></ion-col>
+  <ion-col>
+  <ion-button color="danger" fill="solid" expand="full" (click)="dismissModal()">Cancel</ion-button></ion-col></ion-row>
+</ion-list>
+</ion-col>
+</ion-row>
+</ion-grid>
+</form>
+
+
+</ion-content>
+ 

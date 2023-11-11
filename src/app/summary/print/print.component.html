@@ -1,0 +1,152 @@
+<ion-content class="print">
+  <ion-header id="component1">
+    <ion-toolbar>
+      <ion-img src="./assets/logo.jpg"></ion-img>
+      <ion-row>
+        <ion-col size="7">
+      
+          <h6>GAUTAM BUDH MEDICAL FOUNDATION (Regd.)</h6>
+        <h3><strong>KALA CHARITABLE HEALTH CARE CENTRE</strong></h3>
+        <h6>Nandgram,Main Road,Ghaziabad</h6>
+        <h6>Ph.:8130876794,9599257618</h6>
+        </ion-col>
+      <ion-col class="right">
+        <!-- <div class="right"> -->
+          <h6>Timing:</h6>
+          <h6>Mor. 9:30 to 1:30</h6>
+        <h6>Eve. 5:30 to 9:00</h6>
+        <h6>Sunday Evening Close</h6>
+        </ion-col></ion-row>
+    <hr><br>
+      <h4 class="ion-text-center">O.P.D. APPOINTMENT</h4>
+      <ion-button  slot="end" onclick="window.print()" class="visi">Print</ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <hr>
+  <ion-content >
+    <div class="container" >
+    <form >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label>ID:</ion-label>
+                <ion-input #id type="text" id="id" value="{{patient.id}}"></ion-input>
+               
+              </ion-item>
+  
+              <ion-item>
+                <ion-col>
+                <ion-label >NAME:</ion-label>
+                <ion-input placeholder="Name" readonly="true" value="{{patient.name}}"></ion-input></ion-col>
+              <ion-col><ion-label >AGE:</ion-label>
+                <ion-input readonly="true" placeholder="Enter Address" value="{{patient.age}}"></ion-input></ion-col>
+                <ion-col>
+                  <ion-label >GENDER:</ion-label>
+                  <ion-input readonly="true" placeholder="Enter Address" value="{{patient.gender}}"></ion-input></ion-col>
+              </ion-item>
+             
+              <ion-item>
+               
+              <ion-col size="8">  <ion-label >ADDRESS</ion-label>
+                <ion-input readonly="true" placeholder="Enter Date"value="{{patient.address}}" ></ion-input></ion-col>
+                <ion-col> 
+              <ion-label >DATE OF REGISTRATION</ion-label>
+              <ion-input readonly="true" placeholder="Enter Date"value="{{patient.date}}" ></ion-input></ion-col></ion-item><br>
+              
+              
+                <ion-grid > 
+                <ion-row>
+                 
+                  <ion-col size="3" class="cell-class">
+                    
+                    <ion-label><strong> Date And Deptt.</strong></ion-label>
+                   
+  <ion-input ></ion-input>
+                    <ion-input ></ion-input>
+                    <ion-input ></ion-input>
+                    <ion-input ></ion-input>
+                    <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  
+                </ion-col>
+                  <ion-col size="5" class="cell-class">
+                    <ion-label><strong> Diagnosis,Treatment,Re Call</strong></ion-label>
+                 
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input>
+                  
+                
+                > </ion-col>
+                  <ion-col  size="4" class="cell-class">
+                    <ion-label><strong> Doctor's Name</strong></ion-label>
+                    <ion-input ></ion-input>
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input>
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  <ion-input ></ion-input> 
+                  
+                
+                  </ion-col>
+               <div class="right"> 15 Days</div>Validity
+                
+                </ion-row><br>
+              
+  <div>
+    
+  </div>
+  </ion-grid>
+  
+  
+  
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+  </ion-content>
+  </ion-content>

@@ -1,0 +1,93 @@
+{
+  "patient": [
+    {
+      "id": "101",
+      "name": "fff",
+      "address": "ss",
+      "contact": "ss",
+      "age": "s",
+      "gender": "Male",
+      "date": "2022-08-21",
+      "dept": "sss"
+    },
+    {
+      "id": "102",
+      "name": "fefe",
+      "address": "ere",
+      "contact": "err",
+      "age": "ere",
+      "gender": "Male",
+      "date": null,
+      "dept": "rere"
+    },
+    {
+      "id": "103",
+      "name": "test",
+      "address": "eew",
+      "contact": "ewe",
+      "age": "ewe",
+      "gender": "Male",
+      "date": "2022-08-21",
+      "dept": "wee"
+    },
+    {
+      "id": "104",
+      "name": "frgrg",
+      "address": "fr",
+      "contact": "rfr",
+      "age": "fr",
+      "gender": "Male",
+      "date": "2022-08-21",
+      "dept": "eff"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment": [
+        {
+          "date": "2022-08-21",
+          "totalAmount": 1000,
+          "paidAmount": 100,
+          "workDone": "RCT",
+          "visit": [
+            "100"
+          ],
+          "totalPaid": 200
+        }
+      ],
+      "id": "101"
+    },
+    {
+      "id": "103",
+      "treatment": [
+        {
+          "date": "2022-08-21",
+          "totalAmount": 1000,
+          "paidAmount": 100,
+          "workDone": "RCT",
+          "visit": null,
+          "totalPaid": 100
+        }
+      ]
+    },
+    {
+      "id": "104",
+      "treatment": [
+        {
+          "date": "2022-08-21",
+          "totalAmount": 222,
+          "paidAmount": 0,
+          "workDone": "FILLING",
+          "visit": null,
+          "totalPaid": 0
+        }
+      ]
+    }
+  ],
+  "Data": [
+    {
+      "value": 105,
+      "id": 101
+    }
+  ]
+}

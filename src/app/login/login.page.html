@@ -1,0 +1,41 @@
+<ion-toolbar color="dark" class="tool">
+<h3 class="ion-text-center">Kala Charity Health Care Centre</h3>
+</ion-toolbar>
+<ion-content class="ion-text-center">
+ 
+<form [formGroup]="form" (ngSubmit)="login()">
+<ion-grid>
+<ion-row>
+  <ion-col> <ion-img src="./assets/logo.jpg"></ion-img></ion-col>
+  <ion-col size-sm="8" size-md="4" >
+  <ion-card class="ion-float-right" >
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+  <ion-card-content>
+     <ion-list>
+       <ion-item>
+         <ion-label position="floating">Enter Username</ion-label>
+         <ion-input type="text" formControlName="username"></ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-label position="floating">Enter Password</ion-label>
+        <ion-input type="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-button (click)="login()">
+        Login
+      </ion-button>
+     </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <h3 style=color:red>{{msg}}</h3>
+</ion-col>
+</ion-row>
+
+</ion-grid>
+
+</form>
+
+
+
+</ion-content>

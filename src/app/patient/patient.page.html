@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text">Patients</ion-title>
+    <ion-icon slot="end" name="search-outline"></ion-icon><ion-input slot="end" #id type="text" id="id" placeholder="Search By ID" (ionChange)="searchById($event)"></ion-input>
+    
+  <!-- <ion-button  slot="end" (click)="getid(id.value)"><ion-icon name="search"></ion-icon>Search</ion-button> -->
+  <!-- <ion-button  slot="end" color="danger" (click)="clear()" >clear</ion-button> -->
+  
+  </ion-toolbar>
+</ion-header>
+<ion-item slot="Fixed">
+  <ion-icon slot="start" name="search-outline"></ion-icon>
+  <ion-input placeholder="Search By Name" (ionChange)="searchByName($event)"></ion-input>
+</ion-item>
+
+<ion-content>
+  <ion-list *ngIf="flagp">
+    
+    <ion-item-sliding *ngFor="let idx of patientArray">
+     
+    <ion-item>
+      <ion-label (click)="view(idx)">
+        <h2 class="name">{{idx.name}}</h2>
+        <p>{{idx.contact}}</p>
+        {{idx.date}}
+      </ion-label>
+      <strong><p class="red">ID: {{idx.id}}</p></strong>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option (click)="editPatient(idx.id,idx)" color="primary">Edit</ion-item-option>
+      <ion-item-option (click)="deletePatient(idx.id,idx.name)" color="danger">Delete</ion-item-option>
+    
+    </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+  <ion-list *ngIf="flag">
+    
+    <ion-item-sliding >
+     
+    <ion-item>
+      <ion-label (click)="view(singlePatient)">
+        <h2 class="name">{{singlePatient.name}}</h2>
+        <p>{{singlePatient.contact}}</p>
+        {{singlePatient.date}}
+      </ion-label>
+      <strong><p class="red">ID: {{singlePatient.id}}</p></strong>
+      
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option (click)="editPatient(singlePatient.id,singlePatient)" color="primary">Edit</ion-item-option>
+      <ion-item-option (click)="deletePatient(singlePatient.id,singlePatient.name)" color="danger">Delete</ion-item-option>
+    
+    </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addPatient()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

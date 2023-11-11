@@ -1,0 +1,32 @@
+ion-img{
+    padding: 0;
+    margin: 0;
+    height:140px;
+    width: 100%;
+}
+*{
+    margin: 0.01px;
+    padding: 0;
+}
+@media print{
+    .visi{
+  visibility: none;
+  display: none;
+    }
+    .print::-webkit-scrollbar { 
+        width: 0 !important;
+    display:none }
+}
+.print::-webkit-scrollbar { 
+    width: 0 !important;
+display:none }
+
+.cell-class {
+    border-color: black; 
+    border-width: .01em; 
+    border-style:solid; margin-bottom : -1px;
+    background-color: rgb(253, 250, 250)
+  }
+  .right{
+      margin-left: 190px;
+  }
